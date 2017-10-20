@@ -1,0 +1,16 @@
+/Libraries/Nop.Core/obj/Debug
+/Libraries/Nop.Core/obj/Release
+/Libraries/Nop.Data/obj/Debug
+/Libraries/Nop.Data/obj/Release
+/Plugins/Nop.Plugin.DiscountRules.CustomerRoles/obj/Debug
+/Plugins/Nop.Plugin.DiscountRules.CustomerRoles/obj/Release
+/Plugins/Nop.Plugin.DiscountRules.HadSpentAmount/obj/Debug
+/Plugins/Nop.Plugin.DiscountRules.HasOneProduct/obj/Debug
+/Plugins/Nop.Plugin.DiscountRules.HasOneProduct/obj/Release
+/Plugins/Nop.Plugin.ExchangeRate.McExchange/obj/Debug
+/Plugins/Nop.Plugin.ExchangeRate.McExchange/obj/Release
+/Presentation/Nop.Web/Administration/Bin
+/Presentation/Nop.Web/Content/Images
+/Presentation/Nop.Web/Content/samples
+
+/packages
