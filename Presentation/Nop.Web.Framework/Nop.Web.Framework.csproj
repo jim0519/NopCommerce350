@@ -73,6 +73,7 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -134,6 +135,10 @@
     <Compile Include="Mvc\NullJsonResult.cs" />
     <Compile Include="Seo\CustomUrlRecordEntityNameRequested.cs" />
     <Compile Include="Seo\WwwRequirementAttribute.cs" />
+    <Compile Include="UI\Captcha\CaptchaSettingsExtension.cs" />
+    <Compile Include="UI\Captcha\GRecaptchaControl.cs" />
+    <Compile Include="UI\Captcha\GReCaptchaResponse.cs" />
+    <Compile Include="UI\Captcha\GReCaptchaValidator.cs" />
     <Compile Include="Validators\BaseNopValidator.cs" />
     <Compile Include="WebStoreContext.cs" />
     <Compile Include="StoreIpAddressAttribute.cs" />
