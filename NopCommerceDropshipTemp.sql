@@ -328,6 +328,7 @@ left join
 select
 SKU,
 InventoryQty,
+--CEILING(((Price+case when Notes='FreeShipping' then 0 else Postage end)+0.3)/0.774)-0.05 as Price,
 CEILING((Price+0.3)/0.774)-0.05 as Price,
 --CEILING((Price+0.3)/0.904)-0.05 as Price,--(X-0.026x-0.3-Ds.Price)/x=0.07
 Status,
@@ -348,10 +349,10 @@ delete from DropshipStockQty
 update P
 set StockQuantity=UP.Qty,
 Published=case when UP.Status=1 then 1 else 0 end,
-Price=UP.Price,
-ProductCost=UP.Cost,
-IsFreeShipping=UP.IsFreeShipping,
-AdditionalShippingCharge=(case when UP.IsFreeShipping=1 then 0 else UP.Postage end)
+Price=UP.Price+(case when UP.IsFreeShipping=1 then 0 else UP.Postage end),
+ProductCost=UP.Cost+(case when UP.IsFreeShipping=1 then 0 else UP.Postage end),
+IsFreeShipping=1,--UP.IsFreeShipping,
+AdditionalShippingCharge=0--(case when UP.IsFreeShipping=1 then 0 else UP.Postage end)
 from Product P
 inner join
 (
@@ -819,6 +820,18 @@ where id=262
 
 update Store
 set SslEnabled=0
+where Id=1
+
+
+
+--Set the ssl back to true using sql
+update setting
+set Value='True'
+where id=262
+
+
+update Store
+set SslEnabled=1
 where Id=1
 
 
